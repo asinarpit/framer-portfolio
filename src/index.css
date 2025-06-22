@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Syne:wght@400..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  h2,h3,h4,h5,h6,a {
+    @apply font-[syne] font-bold text-2xl md:text-3xl lg:text-4xl;
+  }
+  p{
+    @apply font-[inter] text-base md:text-lg lg:text-xl text-gray-700;
+  }
+}
+
+/* Hide default cursor on desktop only */
+@media (min-width: 768px) {
+  body {
+    cursor: none;
+  }
+
+  /* Show pointer cursor for clickable elements */
+  a, button, [role="button"], input[type="submit"], input[type="button"], input[type="reset"] {
+    cursor: none;
+  }
+}
+
+.outline-text {
+  -webkit-text-stroke: 2px white;
+}
+
+@media (max-width: 768px) {
+  .outline-text {
+    -webkit-text-stroke: 1px white;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.blur-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+  mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+}
