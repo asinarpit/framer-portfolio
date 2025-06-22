@@ -154,7 +154,7 @@ function NavMenu() {
 
             <AnimatePresence>
                 {isOpen && (
-                    <div className="fixed top-0 right-0 h-full w-[300px] md:w-[350px] z-40">
+                    <div className="fixed top-0 right-0 h-full w-full md:w-[350px] z-40">
                         {/* First Wave */}
                         <motion.div
                             className="absolute inset-0 overflow-hidden"
@@ -166,7 +166,7 @@ function NavMenu() {
                             <img
                                 src={wave1}
                                 alt=""
-                                className="absolute right-0 h-full w-auto object-cover"
+                                className="absolute right-0 h-full w-full object-cover"
                             />
                         </motion.div>
 
@@ -193,7 +193,7 @@ function NavMenu() {
                             initial="initial"
                             animate="animate"
                             exit="exit"
-                            className="absolute top-0 right-0 z-10 inset-0 md:w-auto flex items-center justify-center"
+                            className="absolute top-1/2 translate-y-[-50%] right-10 z-10 md:w-auto flex items-center justify-center"
                         >
                             <motion.nav className='w-full ml-20'>
                                 <motion.ul className="flex flex-col gap-6 text-center">
