@@ -15,7 +15,7 @@ const menuVariants = {
         x: "100%"
     },
     animate: {
-        x: window.innerWidth < 768 ? 10 : 0,
+        x: 10,
         transition: {
             duration: 0.8,
             ease: [0.76, 0, 0.24, 1],
@@ -37,7 +37,7 @@ const secondWaveVariants = {
         x: "100%"
     },
     animate: {
-        x: window.innerWidth < 768 ? 30 : 0,
+        x: 30,
         transition: {
             duration: 0.8,
             ease: [0.76, 0, 0.24, 1],
@@ -154,7 +154,7 @@ function NavMenu() {
 
             <AnimatePresence>
                 {isOpen && (
-                    <div className="fixed top-0 right-0 h-full w-full md:w-[500px] z-40">
+                    <div className="fixed top-0 right-0 h-full w-[300px] md:w-[350px] z-40">
                         {/* First Wave */}
                         <motion.div
                             className="absolute inset-0 overflow-hidden"
@@ -193,9 +193,9 @@ function NavMenu() {
                             initial="initial"
                             animate="animate"
                             exit="exit"
-                            className="absolute top-0 -right-[80px] md:right-[80px] z-10 h-full w-full md:w-auto flex items-center justify-center"
+                            className="absolute top-0 right-0 z-10 inset-0 md:w-auto flex items-center justify-center"
                         >
-                            <motion.nav>
+                            <motion.nav className='w-full ml-20'>
                                 <motion.ul className="flex flex-col gap-6 text-center">
                                     {menuItems.map((item, index) => (
                                         <motion.li
@@ -206,7 +206,7 @@ function NavMenu() {
                                                 variants={itemVariants}
                                                 whileHover={{ scale: 1.05, translateY: -5 }}
                                                 href={item.href}
-                                                className="text-2xl md:text-4xl font-medium text-slate-200 block"
+                                                className="text-4xl font-medium text-slate-200 block"
                                                 onClick={() => setIsOpen(false)}
                                             >
                                                 {item.title}

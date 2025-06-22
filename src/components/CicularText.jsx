@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const CircularText = () => {
     const outerText = "ARPIT SINGH - ARPIT SINGH - ARPIT SINGH - ARPIT SINGH -";
-    const innerText = "WEB DESIGNER • WEB DEVELOPER • WEB DESIGNER • ";
+    const innerText = "UI/UX DESIGNER • WEB DEVELOPER • UI/UX DESIGNER • ";
     const outerRadius = 100;
     const innerRadius = 60;
 

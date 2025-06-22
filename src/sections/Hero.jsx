@@ -1,7 +1,6 @@
 import { FaArrowRight, FaGithub, FaLinkedin, FaTwitter, FaChevronDown } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import Blob from '../components/Blob'
-import NavMenu from '../components/NavMenu'
 import CircularText from '../components/CicularText'
 import layeredWaves from '../assets/layered-waves.svg'
 import HeadingTransition from '../components/HeadingTransition'
@@ -89,10 +88,8 @@ const scrollArrowVariants = {
 function Hero() {
     return (
         <section id='home' className="min-h-screen overflow-hidden relative">
-
-            <NavMenu />
-
-            <div className='grid grid-cols-1 md:grid-cols-3 pt-10 px-4 md:px-10'>
+            
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-20 pt-10 px-4 md:px-10'>
                 <div className='max-w-[350px] mx-auto md:mx-0'>
                     {/* <h2 className='heading text-3xl leading-snug text-gray-700 mb-2'>Building Modern Web Experiences</h2> */}
                     <HeadingTransition title="Building Modern Web Experiences" fontSize='text-xl md:text-2xl' fontWeight='text-bold' />
@@ -144,7 +141,7 @@ function Hero() {
 
                 {/* blob */}
 
-                <div className='md:absolute md:top-[50%] md:left-[50%] md:-translate-x-1/2 md:-translate-y-1/2 z-10 my-10 md:my-0'>
+                <div className='md:absolute md:top-[50%] md:left-[50%] md:-translate-x-1/2 md:-translate-y-1/2 z-10'>
                     <div className="relative w-full flex justify-center items-center">
                         <Blob />
 
@@ -165,8 +162,8 @@ function Hero() {
                 </div>
 
 
-                <div></div>
-                <div className="hidden md:block">
+                <div className='hidden md:block'></div>
+                <div className="mb-20">
                     <CircularText />
                 </div>
 

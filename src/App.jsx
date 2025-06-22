@@ -6,10 +6,12 @@ import Contact from './sections/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import Testimonials from './sections/Testimonials.jsx'
 import BlobCursor from './components/BlobCursor.jsx'
+import NavMenu from './components/NavMenu.jsx'
 
 function App() {
   return (
     <div className='min-h-screen'>
+      <NavMenu />
       <BlobCursor />
       <Hero />
       <About />

@@ -6,6 +6,7 @@ function ParagraphTransition({
   fontSize = "text-base",
   fontWeight = "font-normal",
   tracking = "tracking-normal",
+  color = "text-gray-600",
 }) {
   const transitionDelay = 0.02;
   
@@ -37,7 +38,7 @@ function ParagraphTransition({
           return child.split(" ").map((word, i) => (
             <div className="overflow-hidden" key={`${index}-${i}`}>
               <motion.p
-                className={`text-gray-600 ${fontSize} ${fontWeight} ${tracking}`}
+                className={`${color} ${fontSize} ${fontWeight} ${tracking}`}
                 variants={wordVariants}
                 custom={i}
               >
