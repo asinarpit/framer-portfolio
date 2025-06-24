@@ -121,7 +121,7 @@ function Projects() {
                             initial="initial"
                         >
                             <motion.a
-                                href="/"
+                                href="https://github.com/asinarpit?tab=repositories"
                                 target="_blank"
                                 className="relative text-base md:text-xl text-blue-500 pb-1 overflow-hidden flex items-center gap-2"
                             >

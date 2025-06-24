@@ -99,7 +99,8 @@ function Hero() {
                         I design and develop responsive, fast, and scalable applications using React, Node, and the latest web technologies. Focused on clean code and seamless user experiences.
                     </ParagraphTransition>
                     <div className='mt-5 flex gap-10 items-center'>
-                        <motion.button
+                        <a href="#projects">
+                              <motion.button
                             className='group relative bg-gradient-to-r bg-orange-500 text-white rounded-full hover:shadow-lg transition-shadow duration-300 overflow-hidden h-12'
                             variants={buttonVariants}
                             initial="initial"
@@ -121,6 +122,8 @@ function Hero() {
                                 <FaArrowRight className='text-orange-500' size={14} />
                             </motion.div>
                         </motion.button>
+                        </a>
+                      
 
                         {/* Mobile social links */}
                         <div className="flex md:hidden justify-center gap-6">
