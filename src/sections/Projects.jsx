@@ -1,11 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { hover, motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import ParagraphTransition from '../components/ParagraphTransition';
-import { RxThickArrowLeft, RxThickArrowRight } from 'react-icons/rx';
+import ParagraphTransition from '../components/ParagraphTransition';;
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import HeadingTransition from '../components/HeadingTransition';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import pinImg from "../assets/drawing-pin.webp"
+
+const projects = [
+    {
+        title: "VeginGo",
+        description: "An e-commerce platform for delivering fresh vegetables and fruits in bulk and online, built with React, Redux, and MUI.",
+        image: "/Project1.png"
+    },
+    {
+        title: "PlanItNow",
+        description: "A college event management system with real-time notifications, event discussions, and role-based dashboards using the MERN stack.",
+        image: "Project2.png"
+    },
+    {
+        title: "CryptoRamp",
+        description: "A secure frontend for a crypto ramp platform allowing easy buy/sell of crypto assets with a clean, intuitive UI.",
+        image: "/Project3.png"
+    },
+    {
+        title: "QuickMart",
+        description: "A modern grocery e-commerce UI prototype featuring seamless navigation, product categorization, and cart management.",
+        image: "/Project4.png"
+    }
+];
 
 
 const container = {
@@ -23,7 +45,7 @@ const word = {
     visible: { opacity: 1, y: 0 },
 };
 
-const paragraph = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ex excepturi fugit adipisci cum optio dolores ipsam odit minima beatae obcaecati ullam rerum velit corporis possimus, dolorum tempore. Dolor, pariatur!"
+const paragraph = "Currently building a Workout Planner with an AI Coach that generates personalized fitness routines, tracks user progress, offers real-time feedback, and adapts workouts based on performance and goals."
 
 function Projects() {
     const numCards = 4;
@@ -51,9 +73,8 @@ function Projects() {
         });
     };
 
-    const ProjectCard = ({ angle, idx, children }) => {
+    const ProjectCard = ({ angle, idx, title, description, image }) => {
         const counterRotation = useTransform(smoothRotation, (v) => -v);
-
 
         return (
             <motion.div
@@ -68,10 +89,24 @@ function Projects() {
                     translateY: '-50%',
                 }}
             >
-                {children}
+                <div className={`relative w-[200px] md:w-[300px] h-[250px] md:h-[400px] shadow-[0_3px_5px_rgb(0,0,0,0.3)] mt-14 md:mt-28 rounded-3xl ${idx % 2 === 0 ? "rotate-[5deg]" : "-rotate-[5deg]"}`}>
+                    <img
+                        src={image}
+                        className="w-full h-full object-cover rounded-3xl"
+                        alt=""
+                    />
+                    <div className='absolute inset-0 rounded-3xl bg-black/5'></div>
+                    <h2 className={`absolute bottom-0 drop-shadow-md outline-text left-1/2 -translate-x-1/2 translate-y-1/2 text-[5rem] md:text-[8rem] font-[iter] font-thin ${idx % 2 === 0 ? "text-blue-500" : "text-orange-500"}`}>
+                        {idx + 1}
+                    </h2>
+                </div>
+                <ParagraphTransition fontSize='text-xs md:text-sm'>
+                    {description}
+                </ParagraphTransition>
             </motion.div>
         );
     };
+
 
     return (
         <section id='projects' className="min-h-screen my-10 md:my-20 relative overflow-hidden bg-[url()]">
@@ -177,25 +212,20 @@ function Projects() {
                     style={{ rotate: smoothRotation }}
                     className="relative w-[300px] h-[300px] md:w-[1200px] md:h-[1200px] mx-auto rounded-full"
                 >
-                    {Array.from({ length: numCards }).map((_, idx) => {
-                        const angle = (2 * Math.PI * idx) / numCards - Math.PI / 2;
-                        return (
-                            <ProjectCard key={idx} angle={angle} idx={idx}>
-                                <div className={`relative w-[200px] md:w-[300px] h-[250px] md:h-[400px] shadow-[0_3px_5px_rgb(0,0,0,0.3)] mt-14 md:mt-28 rounded-3xl ${idx % 2 === 0 ? "rotate-[5deg]" : "-rotate-[5deg]"}`}>
-                                    <img
-                                        src="https://cdn.dribbble.com/userupload/37414102/file/original-6ac7f82ecf475a67e12e3156185fa776.jpg?resize=1024x768&vertical=center"
-                                        className="w-full h-full object-cover rounded-3xl"
-                                        alt=""
-                                    />
-                                    <div className='absolute inset-0 rounded-3xl bg-black/5'></div>
-                                    <h2 className={`absolute bottom-0 drop-shadow-md outline-text left-1/2 -translate-x-1/2 translate-y-1/2 text-[5rem] md:text-[10rem] font-[iter] font-thin ${idx % 2 == 0 ? "text-blue-500" : "text-orange-500"}`}>{idx + 1}</h2>
-                                </div>
-                                <ParagraphTransition fontSize='text-xs md:text-sm'>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad unde repellat expedita tempore magnam vel est nesciunt impedit accusamus commodi.
-                                </ParagraphTransition>
-                            </ProjectCard>
-                        );
-                    })}
+                    {
+                        projects.map((project, idx) => {
+                            const angle = (2 * Math.PI * idx) / numCards - Math.PI / 2;
+                            return (
+                                <ProjectCard
+                                    key={idx}
+                                    angle={angle}
+                                    idx={idx}
+                                    image={project.image}
+                                    title={project.title}
+                                    description={project.description}
+                                />
+                            );
+                        })}
                 </motion.div>
             </div>
 

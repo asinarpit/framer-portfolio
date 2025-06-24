@@ -37,19 +37,19 @@ function Contact() {
                             initial="hidden"
                             whileInView="show"
                         >
-                            <motion.a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+                            <motion.a href="https://github.com/asinarpit" target="_blank" rel="noopener noreferrer"
                                 variants={iconVariants}
                                 className="text-2xl md:text-4xl text-blue-500 hover:text-orange-400 transition"
                             >
                                 <FaGithub />
                             </motion.a>
-                            <motion.a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
+                            <motion.a href="https://www.linkedin.com/in/arpit-singh-6a646a272" target="_blank" rel="noopener noreferrer"
                                 variants={iconVariants}
                                 className="text-2xl md:text-4xl text-blue-500 hover:text-orange-400 transition"
                             >
                                 <FaLinkedin />
                             </motion.a>
-                            <motion.a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"
+                            <motion.a href="https://x.com/asin_arpit" target="_blank" rel="noopener noreferrer"
                                 variants={iconVariants}
                                 className="text-2xl md:text-4xl text-blue-500 hover:text-orange-400 transition"
                             >
@@ -100,7 +100,7 @@ function Contact() {
                             <HeadingTransition title={"Quick chat?"} fontSize='text-xl md:text-4xl' />
                             <ParagraphTransition fontSize='text-sm md:text-lg'>Need to discuss something urgently? Let's hop on a quick call and sort things out!</ParagraphTransition>
                             <a
-                                href="https://calendly.com/your-scheduling-link"
+                                href="https://calendly.com/asin060902/30min"
                                 className='text-base md:text-xl text-blue-500 ml-5 md:ml-10'
                                 target="_blank"
                                 rel="noopener noreferrer"

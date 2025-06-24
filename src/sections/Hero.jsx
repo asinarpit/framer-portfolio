@@ -1,4 +1,5 @@
-import { FaArrowRight, FaGithub, FaLinkedin, FaTwitter, FaChevronDown } from 'react-icons/fa'
+import { FaArrowRight, FaGithub, FaLinkedin, FaChevronDown } from 'react-icons/fa'
+import { PiXLogo } from 'react-icons/pi'
 import { motion } from 'framer-motion'
 import Blob from '../components/Blob'
 import CircularText from '../components/CicularText'
@@ -130,7 +131,7 @@ function Hero() {
                                 <FaLinkedin className="text-blue-500 hover:text-blue-600 transition duration-300" size={24} />
                             </a>
                             <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-                                <FaTwitter className="text-blue-500 hover:text-blue-600 transition duration-300" size={24} />
+                                <PiXLogo className="text-blue-500 hover:text-blue-600 transition duration-300" size={24} />
                             </a>
                         </div>
 
@@ -196,14 +197,14 @@ function Hero() {
 
             <div className='hidden md:flex absolute bottom-[30px] left-20 z-20'>
                 <div className="flex flex-col items-center gap-4">
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/asinarpit" target="_blank" rel="noopener noreferrer">
                         <FaGithub className="text-blue-500 hover:text-blue-600 hover:-translate-y-2 transition duration-300" size={18} />
                     </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/arpit-singh-6a646a272" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin className="text-blue-500 hover:text-blue-600 transition hover:-translate-y-2 duration-300" size={18} />
                     </a>
-                    <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-                        <FaTwitter className="text-blue-500 hover:text-blue-600 hover:-translate-y-2 transition duration-300" size={18} />
+                    <a href="https://x.com/asin_arpit" target="_blank" rel="noopener noreferrer">
+                        <PiXLogo className="text-blue-500 hover:text-blue-600 hover:-translate-y-2 transition duration-300" size={18} />
                     </a>
 
                     <motion.div initial={{ height: 0 }} whileInView={{

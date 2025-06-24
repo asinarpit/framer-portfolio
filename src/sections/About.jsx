@@ -137,8 +137,9 @@ function About() {
             <HeadingTransition title={"Work Experience"} fontSize='text-xl md:text-2xl' />
             <div className='w-[60px] md:w-[80px] h-[2px] my-2 bg-orange-500 rounded-full'></div>
             <ParagraphTransition fontSize='text-xs md:text-sm'>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui perferendis sed laborum voluptate sint, optio beatae eveniet ex rerum dicta?
+              Worked as a Full-Stack Developer Intern at VeginGo, building responsive, user-friendly interfaces and features for <a className='text-sm text-orange-600' href="vegingo.com">vegingo.com</a>
             </ParagraphTransition>
+            <a href="https://drive.google.com/file/d/1kX0a_taO2ii0S_RpMViJfsenhHrFQuOo/view?usp=drive_link" target='_blank'>
             <motion.button
               initial={{
                 y: 50, opacity: 0, transition: {
@@ -161,6 +162,7 @@ function About() {
                 <FaArrowRight className="text-white" size={14} />
               </motion.div>
             </motion.button>
+            </a>
           </div>
 
         </div>
