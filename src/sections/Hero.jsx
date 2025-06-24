@@ -124,13 +124,13 @@ function Hero() {
 
                         {/* Mobile social links */}
                         <div className="flex md:hidden justify-center gap-6">
-                            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/asinarpit" target="_blank" rel="noopener noreferrer">
                                 <FaGithub className="text-blue-500 hover:text-blue-600 transition duration-300" size={24} />
                             </a>
-                            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/arpit-singh-6a646a272" target="_blank" rel="noopener noreferrer">
                                 <FaLinkedin className="text-blue-500 hover:text-blue-600 transition duration-300" size={24} />
                             </a>
-                            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+                            <a href="https://x.com/asin_arpit" target="_blank" rel="noopener noreferrer">
                                 <PiXLogo className="text-blue-500 hover:text-blue-600 transition duration-300" size={24} />
                             </a>
                         </div>

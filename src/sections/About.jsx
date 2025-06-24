@@ -3,6 +3,7 @@ import ParagraphTransition from '../components/ParagraphTransition';
 import TextLoop from '../components/TextLoop';
 import { FaArrowRight, FaReact } from 'react-icons/fa';
 import HeadingTransition from '../components/HeadingTransition';
+
 function About() {
 
 
@@ -35,7 +36,7 @@ function About() {
               <HeadingTransition title={"ABOUT"} fontSize='text-5xl md:text-8xl' />
               <div className='relative w-[120px] md:w-[200px] h-[80px] md:h-[120px]'>
                 <div className='w-full h-full bg-blue-500 border-[3px] md:border-[5px] border-blue-500 rounded-full relative overflow-hidden shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>
-                  <img src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" className='w-full h-full object-cover rounded-full' alt="" />
+                  <img src="/me.png" className='w-full h-full object-contain object-fill rounded-full' alt="" />
                   <motion.div
                     className='absolute right-0 top-0 h-full bg-blue-500'
                     initial={{ width: "100%" }}
