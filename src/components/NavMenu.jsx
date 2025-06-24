@@ -112,7 +112,7 @@ function NavMenu() {
     return (
         <>
             <motion.div
-                className='fixed top-8 right-8 z-50 w-[40px] h-[40px] overflow-visible cursor-pointer'
+                className='fixed top-8 right-8 z-[1000] w-[40px] h-[40px] overflow-visible cursor-pointer'
                 initial="initial"
                 whileHover="hover"
                 onClick={() => setIsOpen(!isOpen)}
@@ -154,7 +154,7 @@ function NavMenu() {
 
             <AnimatePresence>
                 {isOpen && (
-                    <div className="fixed top-0 right-0 h-full w-full md:w-[350px] z-40">
+                    <div className="fixed top-0 right-0 h-full w-full md:w-[350px] z-[999]">
                         {/* First Wave */}
                         <motion.div
                             className="absolute inset-0 overflow-hidden"

@@ -34,15 +34,16 @@ function Footer() {
                                 repeat: Infinity,
                                 repeatType: "reverse",
                             }}
+                            className='text-orange-500 mb-2'
                         >
-                            <FaHeart className="text-orange-500" />
+                            <FaHeart />
                         </motion.div>
                         <ParagraphTransition color='text-gray-300' fontSize='text-xs md:text-sm'>
                             by Arpit Singh
                         </ParagraphTransition>
                     </motion.div>
 
-                    <div className="text-center md:text-right">
+                    <div className="text-center md:text-right mb-2">
                         <a 
                             href="#home"
                             className="text-sm md:text-base text-blue-500 hover:text-orange-500 transition-all duration-300"
